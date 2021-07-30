@@ -32,13 +32,53 @@ public class ArrayTryouts {
         for (int element:arr) {
             System.out.print(" "+element);
         }
+        System.out.println();
         System.out.println("Copied array ");
         for (int j:copiedArr) {
-            System.out.print(" "+j);
+            System.out.print(j+ " ");
         }
+        System.out.println();
+        System.out.println("********************");
+        //comparison
+        int[] arr1;
+        arr1= new int[]{100, 20, 34, 5, 56};
+        //int result=Arrays.compare(arr,arr1);
+        int result=Arrays.compare(arr,copiedArr);
+        if(result==0)
+            System.out.println("Same arrays");
+        else if(result<0)
+            System.out.println("Second array has bigger elements");
+        else
+            System.out.println("First array has bigger elements");
 
-        System.out.println("Sorted array ");
+        //equals()
+        if(arr.equals(copiedArr)==true)
+            System.out.println("Same arrays");
+        else
+            System.out.println("Different arrays");
 
+        System.out.println("******Sorted Array ***********");
+      // Arrays.stream(arr).sequential(); ?what it does???????
+       // Arrays.sort(arr);     //sorts complete array
+        System.out.println("Before Sorting");
+        for (int i : arr) {
+            System.out.print(i +"  ");
+        }
+        System.out.println("\nAfter sorting");
+        Arrays.sort(arr,2,5); //sorts array from given index range
+        for (int i : arr) {
+            System.out.print(i +"  ");
+        }
+        Arrays.sort(arr);
+        System.out.println("Whole sorted array");
+        for (int i : arr) {
+            System.out.print(i +"  ");
+        }
+        //to use binraySrearch() array must be sorted first
+        int serachResult=Arrays.binarySearch(arr,58);   //if key is present -it returns its index
+                                                            //if key is not present- it returns possible insertion position
+                                                            //in that sorted array as negative value
+        System.out.println("Search Result = "+serachResult);
 
     }
 }
