@@ -16,7 +16,7 @@ public class ArrayListDataRestrictionDemo {
         myList.add(12.3f);
         myList.add(123);
         myList.add(null);
-        //myList.add('S');      Number - allows only numerical values,not char or string
+        //myList.add('S');      Number - allows only numerical values,not char or string or objects
         //myList.add("Shweta");
         //myList.add(new Object());
 
